@@ -2789,7 +2789,7 @@ def evaluate_circuit(key, seeds=(1, 2, 3, 4, 5), muts_per_seed=3, qmax=24,
                    "exact_binomial_convention": dict(
                        EXACT_BINOMIAL_CONVENTION),
                    "methods": {}}
-            if not equivalent:
+            if not equivalent: #filter out output-equivalent mutants (L1 < 10^-9)
                 mut_tag = slot["slot_id"]
                 qmon_ctx = (make_qmon_ctx(
                     mqc, key, oracle, slot["slot_id"]

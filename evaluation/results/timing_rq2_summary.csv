@@ -1,0 +1,17 @@
+Scope,Stage,n,Mean (s),Min (s),P25 (s),Median (s),P75 (s),Max (s)
+All 310,Checkpoint selection (Algorithm 1),310,0.048,4.75e-04,5.03e-03,0.013,0.037,2.412
+All 310,Final-read split,310,1.30e-04,7.20e-06,3.39e-05,6.20e-05,1.37e-04,1.84e-03
+All 310,Cone tracing (Algorithm 2),310,6.568,4.30e-06,7.85e-05,3.63e-04,0.030,567.027
+All 310,Grouping / ancilla accounting,310,0.143,1.39e-05,4.41e-05,1.10e-04,4.71e-03,9.962
+All 310,FFD packing,310,2.03e-04,2.10e-06,6.20e-06,1.05e-05,3.55e-05,0.015
+All 310,ILP refinement (circuits where it ran),80,8.060,0.012,0.013,0.017,0.087,600.490
+All 310,Batch circuit construction,310,0.299,3.14e-04,1.12e-03,2.09e-03,0.015,18.261
+All 310,Total planning time,310,9.138,9.53e-04,7.27e-03,0.027,0.172,601.290
+RQ3 238,Checkpoint selection (Algorithm 1),238,0.056,4.75e-04,5.50e-03,0.015,0.043,2.412
+RQ3 238,Final-read split,238,1.53e-04,7.20e-06,3.81e-05,7.33e-05,1.58e-04,1.84e-03
+RQ3 238,Cone tracing (Algorithm 2),238,8.555,1.48e-05,2.38e-04,1.17e-03,0.179,567.027
+RQ3 238,Grouping / ancilla accounting,238,0.186,2.08e-05,6.56e-05,4.33e-04,0.017,9.962
+RQ3 238,FFD packing,238,2.63e-04,3.30e-06,7.60e-06,1.54e-05,7.27e-05,0.015
+RQ3 238,ILP refinement (circuits where it ran),80,8.060,0.012,0.013,0.017,0.087,600.490
+RQ3 238,Batch circuit construction,238,0.389,4.11e-04,1.54e-03,3.85e-03,0.047,18.261
+RQ3 238,Total planning time,238,11.895,9.53e-04,9.22e-03,0.038,0.463,601.290

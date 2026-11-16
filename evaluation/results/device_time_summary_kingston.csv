@@ -1,0 +1,63 @@
+O_job (s),Metric,Method,n,Mean,Min,P25,Median,P75,IQR,Max
+0.0,Full-check time per circuit (s),qmon,238,88.9,2.13,2.21,2.4,33.7,31.5,"2,633"
+0.0,Full-check time per circuit (s),statistical,238,205,6.26,18.8,43.9,189,170,"3,888"
+0.0,Full-check time per circuit (s),proq,238,206,6.26,18.8,43.9,189,170,"3,909"
+0.0,Full-check time per circuit (s),liu,238,205,6.26,18.8,43.9,189,170,"3,891"
+0.0,"Full-check time, one job (s)",qmon,238,88.9,2.13,2.21,2.4,33.7,31.5,"2,633"
+0.0,"Full-check time, one job (s)",statistical,238,205,6.26,18.8,43.9,189,170,"3,888"
+0.0,"Full-check time, one job (s)",proq,238,206,6.26,18.8,43.9,189,170,"3,909"
+0.0,"Full-check time, one job (s)",liu,238,205,6.26,18.8,43.9,189,170,"3,891"
+0.0,"Time to detection, detected mutants (s)",qmon,"1,782",93.2,2.13,2.21,4.49,40.1,37.9,"2,633"
+0.0,"Time to detection, detected mutants (s)",statistical,"1,928",105,2.09,6.26,20.9,90,83.7,"3,755"
+0.0,"Time to detection, detected mutants (s)",proq,"2,031",96.8,2.09,8.34,18.8,69,60.6,"3,742"
+0.0,"Time to detection, detected mutants (s)",liu,"2,036",96.5,2.09,6.26,18.8,69,62.8,"3,726"
+0.0,"Time to detection, detected mutants (s)",qmon early stop (UB),"1,782",42.5,2.13,2.21,2.34,7.23,5.02,"2,363"
+0.0,Time spent on missed mutants (s),qmon,"1,078",62.6,2.13,2.2,2.28,4.49,2.29,"1,870"
+0.0,Time spent on missed mutants (s),statistical,932,124,6.26,12.5,18.8,45.9,33.3,"1,639"
+0.0,Time spent on missed mutants (s),proq,829,129,6.26,12.5,16.7,25,12.5,"1,634"
+0.0,Time spent on missed mutants (s),liu,824,129,6.26,12.5,16.7,23.1,10.5,"1,634"
+2.0,Full-check time per circuit (s),qmon,238,149,4.13,4.21,4.4,61.7,57.4,"4,339"
+2.0,Full-check time per circuit (s),statistical,238,390,12.3,36.8,85.9,367,330,"7,140"
+2.0,Full-check time per circuit (s),proq,238,390,12.3,36.8,85.9,367,330,"7,161"
+2.0,Full-check time per circuit (s),liu,238,390,12.3,36.8,85.9,367,330,"7,143"
+2.0,"Full-check time, one job (s)",qmon,238,90.9,4.13,4.21,4.4,35.7,31.5,"2,635"
+2.0,"Full-check time, one job (s)",statistical,238,207,8.26,20.8,45.9,191,170,"3,890"
+2.0,"Full-check time, one job (s)",proq,238,208,8.26,20.8,45.9,191,170,"3,911"
+2.0,"Full-check time, one job (s)",liu,238,207,8.26,20.8,45.9,191,170,"3,893"
+2.0,"Time to detection, detected mutants (s)",qmon,"1,782",159,4.13,4.21,8.49,70,65.8,"4,339"
+2.0,"Time to detection, detected mutants (s)",statistical,"1,928",201,4.09,12.3,40.9,176,164,"6,909"
+2.0,"Time to detection, detected mutants (s)",proq,"2,031",186,4.09,16.3,36.8,135,119,"6,872"
+2.0,"Time to detection, detected mutants (s)",liu,"2,036",186,4.09,12.3,36.8,135,123,"6,856"
+2.0,"Time to detection, detected mutants (s)",qmon early stop (UB),"1,782",72.3,4.13,4.21,4.34,13.2,9.02,"3,885"
+2.0,Time spent on missed mutants (s),qmon,"1,078",96.2,4.13,4.2,4.28,8.49,4.29,"2,662"
+2.0,Time spent on missed mutants (s),statistical,932,230,12.3,24.5,36.8,89.9,65.3,"3,123"
+2.0,Time spent on missed mutants (s),proq,829,238,12.3,24.5,32.7,49,24.5,"3,118"
+2.0,Time spent on missed mutants (s),liu,824,239,12.3,24.5,32.7,45.1,20.5,"3,118"
+5.0,Full-check time per circuit (s),qmon,238,239,7.13,7.21,7.4,104,96.4,"6,898"
+5.0,Full-check time per circuit (s),statistical,238,666,21.3,63.8,149,634,570,"12,018"
+5.0,Full-check time per circuit (s),proq,238,666,21.3,63.8,149,634,570,"12,039"
+5.0,Full-check time per circuit (s),liu,238,666,21.3,63.8,149,634,570,"12,021"
+5.0,"Full-check time, one job (s)",qmon,238,93.9,7.13,7.21,7.4,38.7,31.5,"2,638"
+5.0,"Full-check time, one job (s)",statistical,238,210,11.3,23.8,48.9,194,170,"3,893"
+5.0,"Full-check time, one job (s)",proq,238,211,11.3,23.8,48.9,194,170,"3,914"
+5.0,"Full-check time, one job (s)",liu,238,210,11.3,23.8,48.9,194,170,"3,896"
+5.0,"Time to detection, detected mutants (s)",qmon,"1,782",257,7.13,7.21,14.5,118,111,"6,898"
+5.0,"Time to detection, detected mutants (s)",statistical,"1,928",346,7.09,21.3,70.9,305,284,"11,640"
+5.0,"Time to detection, detected mutants (s)",proq,"2,031",321,7.09,28.3,63.8,234,206,"11,567"
+5.0,"Time to detection, detected mutants (s)",liu,"2,036",320,7.09,21.3,63.8,234,213,"11,551"
+5.0,"Time to detection, detected mutants (s)",qmon early stop (UB),"1,782",117,7.13,7.21,7.34,22.2,15,"6,168"
+5.0,Time spent on missed mutants (s),qmon,"1,078",147,7.13,7.2,7.28,14.5,7.29,"3,850"
+5.0,Time spent on missed mutants (s),statistical,932,389,21.3,42.5,63.8,156,113,"5,349"
+5.0,Time spent on missed mutants (s),proq,829,401,21.3,42.5,56.7,85,42.5,"5,344"
+5.0,Time spent on missed mutants (s),liu,824,403,21.3,42.5,56.7,78.1,35.5,"5,344"
+
+O_job (s),QMON / baseline,Median ratio,95% CI (family bootstrap),Mean ratio,P25,P75,IQR,Circuits where QMON is faster
+0.0,statistical,0.151,"[0.125, 0.175]",0.206,0.1,0.256,0.155,237 / 238
+0.0,proq,0.151,"[0.125, 0.175]",0.206,0.1,0.256,0.155,237 / 238
+0.0,liu,0.151,"[0.125, 0.175]",0.206,0.1,0.256,0.155,237 / 238
+2.0,statistical,0.146,"[0.117, 0.169]",0.194,0.0949,0.253,0.158,237 / 238
+2.0,proq,0.146,"[0.118, 0.169]",0.194,0.0949,0.253,0.158,237 / 238
+2.0,liu,0.146,"[0.118, 0.169]",0.194,0.0949,0.253,0.158,237 / 238
+5.0,statistical,0.143,"[0.115, 0.166]",0.188,0.0926,0.251,0.159,237 / 238
+5.0,proq,0.143,"[0.115, 0.166]",0.188,0.0926,0.252,0.159,237 / 238
+5.0,liu,0.143,"[0.115, 0.166]",0.188,0.0926,0.251,0.159,237 / 238

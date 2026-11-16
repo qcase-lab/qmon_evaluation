@@ -1,0 +1,7 @@
+method,detection_mean,detection_sd,detected,n_mutants,covered_detection_mean,covered_detection_sd,covered_detected,n_covered,loc_precision_mean,loc_precision_sd,false_alarm_percent,false_alarms,fa_circuits
+qmon,62.4,5.4,1782,2860,80.0,3.9,1774,2217,0.522,0.126,0.8,2,238
+qmon_pernode,67.2,4.5,1921,2860,86.4,1.6,1915,2217,0.496,0.127,0.8,2,238
+statistical,67.4,4.4,1928,2860,86.7,1.6,1924,2217,0.494,0.126,0.0,0,238
+proq,71.1,4.2,2031,2860,91.6,1.0,2031,2217,0.5,0.13,0.0,0,238
+liu,71.3,4.4,2036,2860,91.9,0.8,2036,2217,0.501,0.131,0.0,0,238
+mqt,59.2,6.2,1688,2860,76.1,4.0,1688,2217,0.476,0.122,,,

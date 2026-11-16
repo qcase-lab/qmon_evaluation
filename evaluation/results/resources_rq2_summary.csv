@@ -1,0 +1,39 @@
+Scope,Metric,n,Mean,Min,P25,Median,P75,Max
+"All 310, per batch",Qubits per batch,7215,21.34,2,20,22,24,24
+"All 310, per batch",Ancillas per batch,7215,11.09,0,9,11,13,21
+"All 310, per batch",Monitor groups per batch,7215,2.02,1,1,1,2,28
+"All 310, per batch",Checkpoints per batch (= measurements = resets),7215,2.73,1,1,2,3,28
+"All 310, per batch",Replay gates per batch,7215,371.57,1,84,206,496,"2,584"
+"All 310, per batch",2-qubit gates added per batch,7215,193.18,0,44,92,236,"2,104"
+"All 310, per batch",Operation ratio (batch / original),7215,1.70,1.02,1.29,1.55,1.86,8.59
+"All 310, per batch",Depth ratio (batch / original),7215,1.66,1,1.25,1.51,1.86,8.68
+"All 310, per batch",2-qubit gate ratio (batch / original),7215,1.70,1,1.29,1.55,1.88,8.22
+"All 310, per circuit",Batches B (runs per full scan),310,23.27,1,1,1,7,853
+"All 310, per circuit","Shots per full scan (B x 8,192)",310,"190,662.19","8,192","8,192","8,192","57,344","6,987,776"
+"All 310, per circuit",QMON checkpoints K_qmon,310,66.01,1,6,12.50,52,"1,626"
+"All 310, per circuit",Mid-circuit checkpoints,310,63.62,1,6,12,45,"1,617"
+"All 310, per circuit",Final reads (free),310,2.40,0,0,0,4,14
+"All 310, per circuit",Max qubits per batch,310,14.35,2,7,12,24,24
+"All 310, per circuit","Replay gates, full scan",310,"8,647.97",1,6,14,475,"655,831"
+"All 310, per circuit","2-qubit gates added, full scan",310,"4,496.02",0,0,2,273,"265,750"
+"All 310, per circuit",Max depth ratio,310,2.30,1.03,1.16,1.52,2.98,8.68
+"All 310, per circuit",mu_op (Eq. 9),310,40.50,1.03,1.40,2.50,18.42,"1,304.27"
+"RQ3 238, per batch",Qubits per batch,7143,21.47,3,20,22,24,24
+"RQ3 238, per batch",Ancillas per batch,7143,11.20,0,9,11,14,21
+"RQ3 238, per batch",Monitor groups per batch,7143,1.98,1,1,1,2,28
+"RQ3 238, per batch",Checkpoints per batch (= measurements = resets),7143,2.70,1,1,2,3,28
+"RQ3 238, per batch",Replay gates per batch,7143,375.26,3,87,209,500,"2,584"
+"RQ3 238, per batch",2-qubit gates added per batch,7143,195.12,0,45,93,238,"2,104"
+"RQ3 238, per batch",Operation ratio (batch / original),7143,1.70,1.02,1.29,1.55,1.87,8.59
+"RQ3 238, per batch",Depth ratio (batch / original),7143,1.67,1,1.25,1.52,1.87,8.68
+"RQ3 238, per batch",2-qubit gate ratio (batch / original),7143,1.71,1,1.29,1.55,1.89,8.22
+"RQ3 238, per circuit",Batches B (runs per full scan),238,30.01,1,1,1,14,853
+"RQ3 238, per circuit","Shots per full scan (B x 8,192)",238,"245,863.26","8,192","8,192","8,192","114,688","6,987,776"
+"RQ3 238, per circuit",QMON checkpoints K_qmon,238,84.29,3,9,21,80,"1,626"
+"RQ3 238, per circuit",Mid-circuit checkpoints,238,81.17,2,8,18.50,72,"1,617"
+"RQ3 238, per circuit",Final reads (free),238,3.12,0,0,1,5,14
+"RQ3 238, per circuit",Max qubits per batch,238,16.12,3,8,20.50,24,24
+"RQ3 238, per circuit","Replay gates, full scan",238,"11,262.46",3,9,52.50,"1,301","655,831"
+"RQ3 238, per circuit","2-qubit gates added, full scan",238,"5,856.16",0,0,20.50,990,"265,750"
+"RQ3 238, per circuit",Max depth ratio,238,2.63,1.03,1.21,2,3.68,8.68
+"RQ3 238, per circuit",mu_op (Eq. 9),238,52.30,1.09,1.60,6.18,37.67,"1,304.27"

@@ -1,0 +1,4 @@
+plan,unit,circuits,mean,median,p75_nearest_rank,max,circuits_with_one_batch,paper_median,paper_p75,paper_mean
+B,batch runs (batched QMON),238,30.01260504201681,1.0,14,853,125,1,14,30.0
+K_qmon,checkpoint reads (independent QMON),238,84.28571428571429,21.0,80,1626,,21,80,84.3
+K,circuit runs (separate-run assertions),238,92.1344537815126,21.0,89,1626,,21,89,92.1

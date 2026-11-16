@@ -1,0 +1,14 @@
+OS: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.43
+Python: 3.12.16
+Logical CPUs: 8
+CPU: Intel(R) Core(TM) i7-8665U CPU @ 1.90GHz
+RAM visible to WSL: 7.6 GiB
+
+
+qiskit: 2.4.1
+qiskit-aer: 0.17.2
+numpy: 2.4.6
+scipy: 1.17.1
+pulp: 3.3.2
+gurobipy: 13.0.2
+Repeats per stage: 5 (median), budget 60 s; Qmax = 24

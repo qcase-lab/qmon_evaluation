@@ -1,0 +1,7 @@
+mechanism,count,share_percent
+no_raw_deployed_z_signal,262,60.648148148148145
+raw_signal_fully_erased_by_batch_channel,138,31.944444444444443
+batch_signal_present_but_realized_test_missed,32,7.407407407407407
+ablation flags (of all deployment-covered misses),143,
+ablation flags with correct cone,141,
+erased-by-replay misses the ablation catches,136,

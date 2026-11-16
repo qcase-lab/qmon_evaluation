@@ -1,0 +1,6 @@
+category,count,rule
+outside candidate scope (no affected numerical candidate),635,
+deployment gap (affected candidate not deployed at Qmax=24),11,
+"deployment-covered, missed by every method",87,no method incl. the per-checkpoint ablation flags it (aggregate() rule)
+"deployment-covered, caught by another method",345,no method incl. the per-checkpoint ablation flags it (aggregate() rule)
+total QMON misses,1078,

@@ -1,0 +1,30 @@
+{
+  "manifest": {
+    "file": "inputs/rq3_single_error_manifest.json",
+    "sha256": "f27e34785499b2242e714f73fe3001be6b6ada32dc088556988d557194c5a3dc"
+  },
+  "false_alarms": {
+    "file": "results/rq3/rq3_falsealarm.pkl",
+    "sha256": "3885f3a73743cb039a4ad2cd23396fa6dcb221e316a2102ce70e13511b9860b0",
+    "records": 238
+  },
+  "mutants": {
+    "mode": "full-per-record",
+    "file": "results/rq3/rq3_mutant.pkl",
+    "sha256": "97350ceeab8e10dbebf7f1cefae536361231df54d517e8c75d6694982fcd8033",
+    "records": 3570
+  },
+  "miss_mechanism": {
+    "file": "results/rq3/rq3_deployed_miss_diagnosis.json",
+    "sha256": "6bb52b7092677cce4758b9a02a48d153f007a241f049e4451c9af9ae4bf2525f",
+    "summary_in_file": {
+      "batch_signal_present_but_realized_test_missed": 32,
+      "no_raw_deployed_z_signal": 262,
+      "raw_signal_fully_erased_by_batch_channel": 138
+    }
+  },
+  "printed_table3": {
+    "file": "results/rq3/rq3_aggregate.txt",
+    "sha256": "40eeba0d807ac313cd23215dfeab60e5f92ebb17c7e15acba0bc4b6d1d23d5cb"
+  }
+}

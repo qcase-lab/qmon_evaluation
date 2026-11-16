@@ -1,0 +1,21 @@
+\begin{table}[!t]
+\caption{Planning time per circuit in seconds (310 circuits; ILP: the 80 circuits where it is triggered)}
+\label{tab:planning}
+\centering
+\footnotesize
+\begin{tabular}{lrrrrr}
+\hline
+Stage & Median & P75 & Mean & Max & Total \\
+\hline
+Checkpoint selection & 0.013 & 0.037 & 0.048 & 2.41 & 14.9 \\
+Final-read split & $<$0.001 & $<$0.001 & $<$0.001 & 0.002 & 0.040 \\
+Cone tracing & $<$0.001 & 0.030 & 6.57 & 567 & 2,036 \\
+Ancilla accounting & $<$0.001 & 0.005 & 0.143 & 9.96 & 44.2 \\
+FFD packing & $<$0.001 & $<$0.001 & $<$0.001 & 0.015 & 0.063 \\
+ILP refinement & 0.017 & 0.087 & 8.06 & 600 & 645 \\
+Circuit construction & 0.002 & 0.015 & 0.299 & 18.3 & 92.7 \\
+\hline
+Total & 0.027 & 0.172 & 9.14 & 601 & 2,833 \\
+\hline
+\end{tabular}
+\end{table}

@@ -1,0 +1,7 @@
+method,name,TP_detected_mutants,FN_missed_mutants,positives_non_equivalent_mutants,TPR_pooled_percent,FNR_pooled_percent,FNR_seed_mean,FNR_seed_sd,FP_flagged_correct_circuits,TN_clean_correct_circuits,negatives_correct_circuits,FPR_percent,source_positives,source_negatives
+qmon,QMON (batched),1782,1078,2860,62.30769230769231,37.69230769230769,37.60042450023263,5.443399729937796,2,236,238,0.8403361344537815,per-record,per-record
+qmon_pernode,QMON (independent per-checkpoint ablation),1921,939,2860,67.16783216783217,32.83216783216783,32.80212185952555,4.496357790430737,2,236,238,0.8403361344537815,per-record,per-record
+statistical,Statistical assertion,1928,932,2860,67.41258741258741,32.58741258741259,32.558159687987335,4.384722879308286,0,238,238,0,per-record,per-record
+proq,Projection assertion (Proq),2031,829,2860,71.01398601398601,28.986013986013987,28.905045522779563,4.243394900354682,0,238,238,0,per-record,per-record
+liu,Dynamic ancilla (Liu et al.),2036,824,2860,71.18881118881119,28.81118881118881,28.730922042670954,4.4451342195880965,0,238,238,0,per-record,per-record
+mqt,MQT debugger (combined flag),1688,1172,2860,59.02097902097902,40.97902097902098,40.836353489126104,6.217229053327223,,,,,per-record,not-measured
