@@ -186,7 +186,7 @@ def compile_and_time(circuit, seed):
         "compile_s": compile_s,
     }
 
-
+#Baseline + QMON Building
 # ============================================================================
 # Build the circuits RQ3 would run on hardware (one circuit = one run of 8,192 shots)
 # ============================================================================

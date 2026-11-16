@@ -4,7 +4,7 @@ Joins the per-shot durations D from Part 1 (rq3_device_time_circuits.py) with th
 authors' stored RQ3 results, and turns them into run times with IBM's job-time formula:
 
     T_run = O_job + S * (t_rep + t_init + D)          S = 8,192 shots per run
-      O_job   fixed overhead per job, swept over JOB_OVERHEADS (seconds)
+      O_job   fixed overhead per job, JOB_OVERHEADS (seconds; 2 s, IBM's figure)
       t_rep   wait between shots, the backend's default_rep_delay
       t_init  reset at the start of each shot, the backend's median reset duration
       D       per-shot duration of the compiled circuit (median over transpiler seeds)
@@ -42,12 +42,14 @@ sys.path.insert(0, str(REPO / "src"))
 from circuit_families import canonical_family_of       # authors' family labels (bootstrap)
 
 SHOTS = 8192                          # shots per run, as in the paper
-JOB_OVERHEADS = [0.0, 2.0, 5.0]       # O_job sweep in seconds (IBM's guide: about 2 s)
+JOB_OVERHEADS = [2.0]                 # O_job in seconds: IBM's guide says about 2 s per job
+                                      # (add values, e.g. [0.0, 2.0, 5.0], for a sensitivity sweep)
 BASELINES = ["statistical", "proq", "liu"]            # the hardware-runnable baselines
 METHODS = ["qmon"] + BASELINES
 BOOT = 2000                           # bootstrap resamples, as in the paper
 OUT_DIR = Path(__file__).resolve().parents[1] / "results"
 RESOURCES_RQ2_CSV = OUT_DIR / "resources_per_batch.csv"   # your pre-transpile resources
+RESOURCES_RQ2_CACHE = OUT_DIR / "resources_cache"          # its per-circuit plans
 RESOURCE_FIELDS = ["qubits", "operations", "depth", "one_qubit_gates", "two_qubit_gates",
                    "swaps", "measures", "resets"]           # same names as Part 1's columns
 KINDS = ["original", "qmon", "statistical", "liu", "proq"]
@@ -267,22 +269,37 @@ def resource_rows(cache):
 
 def check_against_rq2_resources(rows, caches):
     """Sanity check: our BEFORE counts for QMON batches should equal your
-    resources_per_batch.csv (same circuit, same batch), where the RQ3 plan is the
-    RQ2 plan. Returns (matches, compared, examples of mismatches)."""
-    if not RESOURCES_RQ2_CSV.exists():
+    resources_per_batch.csv for the SAME batch. Batches are matched by content (the
+    set of checkpoint gates in the batch), not by index: the RQ2 plan in your resources
+    run and the stored RQ3 plan list the same batches in a different order for 90 of
+    the 238 circuits, and group them differently for 2 (equally good ILP optima).
+    Returns (matches, compared, unmatched, examples of mismatches)."""
+    if not RESOURCES_RQ2_CSV.exists() or not RESOURCES_RQ2_CACHE.exists():
         return None
-    theirs = {}
+    theirs = {}                                                   # (circuit, index) -> row
     with RESOURCES_RQ2_CSV.open() as f:
         for r in csv.DictReader(f):
             theirs[(r["circuit"], r["batch"])] = r
+    by_content = {}                                               # (circuit, gates) -> index
+    for key in caches:
+        path = RESOURCES_RQ2_CACHE / f"{key}.pkl"
+        if path.exists():
+            with path.open("rb") as f:
+                record = pickle.load(f)["record"]                 # your resources run
+            for i, batch in enumerate(record["batches"]):
+                by_content[(key, frozenset(batch["gate_groups"]))] = str(i)
     pairs = [("before_qubits", "qubits"), ("before_operations", "operations"),
              ("before_depth", "depth"), ("before_two_qubit_gates", "two_qubit_gates")]
-    matches, compared, bad = 0, 0, []
+    matches, compared, unmatched, bad = 0, 0, 0, []
     for row in rows:
-        if row["kind"] != "qmon" or caches[row["circuit"]].get("plan_regrouped"):
-            continue                                              # regrouped: batches differ
-        other = theirs.get((row["circuit"], row["label"]))
+        if row["kind"] != "qmon":
+            continue
+        cache = caches[row["circuit"]]
+        gates = frozenset(cache["batch_nodes"][int(row["label"])])     # this batch's content
+        index = by_content.get((row["circuit"], gates))
+        other = theirs.get((row["circuit"], index)) if index is not None else None
         if other is None:
+            unmatched += 1                                        # no batch with this content
             continue
         compared += 1
         if all(int(row[a]) == int(other[b]) for a, b in pairs):
@@ -290,7 +307,7 @@ def check_against_rq2_resources(rows, caches):
         elif len(bad) < 5:
             bad.append((row["circuit"], row["label"],
                         {b: (row[a], other[b]) for a, b in pairs}))
-    return matches, compared, bad
+    return matches, compared, unmatched, bad
 
 
 def detection_curve(mutant_rows, o_job, points=60):
@@ -466,9 +483,11 @@ def main():
     print(f"\nCircuits where transpiling removed a measure or reset: {len(lost)} {lost[:5]}")
     check = check_against_rq2_resources(res_rows, caches)
     if check:
-        matches, compared, bad = check
-        print(f"QMON batches matching resources_per_batch.csv (qubits, ops, depth, 2q): "
-              f"{matches} / {compared}" + (f"; first mismatches: {bad}" if bad else ""))
+        matches, compared, unmatched, bad = check
+        print(f"QMON batches matching resources_per_batch.csv (same batch content; "
+              f"qubits, ops, depth, 2q): {matches} / {compared}; "
+              f"{unmatched} batches grouped differently in the RQ2 plan (not compared)"
+              + (f"; first mismatches: {bad}" if bad else ""))
 
 
 if __name__ == "__main__":
