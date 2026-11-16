@@ -1,6 +1,4 @@
-# RQ3 device-time estimates — FakeKingston (full run)
-
-238 circuits timed on kingston. Device-time estimates, 8,192 shots per run.
+# RQ3 device-time estimates for FakeKingston (full run)
 
 ## Device-time estimates (8,192 shots per run)
 
